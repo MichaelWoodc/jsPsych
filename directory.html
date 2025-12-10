@@ -2,452 +2,238 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <title>jsPsych Research Demos Hub</title>
+  <title>Directory Sitemap</title>
   <style>
-    /* Dark Theme */
-    :root {
-      --bg-dark: #121212;
-      --bg-card: #1e1e1e;
-      --text-primary: #e0e0e0;
-      --text-secondary: #aaaaaa;
-      --accent: #4dabf7;
-      --accent-hover: #74c0fc;
-      --border: #333;
-      --success: #51cf66;
-      --warning: #ff922b;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-primary);
-      line-height: 1.6;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    
-    /* Header */
-    .header {
-      text-align: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 2px solid var(--accent);
-    }
-    
-    .header h1 {
-      color: var(--accent);
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, var(--accent), #9775fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .header p {
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    /* Category Cards */
-    .category {
-      background: var(--bg-card);
-      border-radius: 12px;
-      padding: 1.5rem;
-      border: 1px solid var(--border);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .category:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-    
-    .category h2 {
-      color: var(--accent);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .category h2::before {
-      content: '';
-      width: 8px;
-      height: 24px;
-      background: var(--accent);
-      border-radius: 4px;
-    }
-    
-    .demo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-    
-    .demo-item {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      padding: 1rem;
-      transition: all 0.2s ease;
-      border-left: 3px solid transparent;
-    }
-    
-    .demo-item:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-left-color: var(--accent);
-      transform: translateX(5px);
-    }
-    
-    .demo-item a {
-      color: var(--text-primary);
-      text-decoration: none;
-      display: block;
-      font-weight: 500;
-      margin-bottom: 0.25rem;
-    }
-    
-    .demo-item a:hover {
-      color: var(--accent-hover);
-    }
-    
-    .demo-description {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-top: 0.25rem;
-    }
-    
-    .demo-tag {
-      display: inline-block;
-      background: rgba(77, 171, 247, 0.2);
-      color: var(--accent);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      margin-top: 0.5rem;
-      font-weight: 500;
-    }
-    
-    /* Key Demos Section */
-    .key-demos {
-      background: linear-gradient(135deg, rgba(77, 171, 247, 0.1), rgba(151, 117, 250, 0.1));
-      border: 2px solid var(--accent);
-    }
-    
-    .key-demos .demo-grid {
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    }
-    
-    .key-demos .demo-item {
-      background: rgba(0, 0, 0, 0.3);
-    }
-    
-    /* Quick Links */
-    .quick-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-    
-    .quick-link {
-      background: var(--accent);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.2s ease;
-    }
-    
-    .quick-link:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-    }
-    
-    /* Footer */
-    .footer {
-      text-align: center;
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-    
-    @media (max-width: 768px) {
-      body {
-        padding: 1rem;
-      }
-      
-      .demo-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .header h1 {
-        font-size: 2rem;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    h1 { color: #333; }
+    pre { font-family: monospace; }
+    a { text-decoration: none; color: #0066cc; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header -->
-    <div class="header">
-      <h1>jsPsych Research Demos Hub</h1>
-      <p>Interactive demonstrations of jsPsych features for psychology and behavioral research</p>
-      <div class="quick-links">
-        <a href="#key-demos" class="quick-link">Key Demos</a>
-        <a href="#survey-demos" class="quick-link">Survey Tools</a>
-        <a href="#response-demos" class="quick-link">Response Methods</a>
-        <a href="#specialized-demos" class="quick-link">Specialized Tools</a>
-      </div>
-    </div>
-    
-    <!-- Key Demos (Research-Ready) -->
-    <div id="key-demos" class="category key-demos">
-      <h2>🎯 Key Research-Ready Demos</h2>
-      <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_1.html'>Complete Experiment Demo 1</a>
-          <div class="demo-description">Full-featured experiment with multiple trial types</div>
-          <span class="demo-tag">Complete Demo</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_2.html'>Complete Experiment Demo 2</a>
-          <div class="demo-description">Alternative experiment structure and flow</div>
-          <span class="demo-tag">Complete Demo</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_3.html'>Complete Experiment Demo 3</a>
-          <div class="demo-description">Advanced experimental design patterns</div>
-          <span class="demo-tag">Complete Demo</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demo-flanker.html'>Flanker Task Demo</a>
-          <div class="demo-description">Classic attentional conflict task</div>
-          <span class="demo-tag">Cognitive Task</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demo-simple-rt-task.html'>Simple RT Task</a>
-          <div class="demo-description">Basic reaction time measurement</div>
-          <span class="demo-tag">Basic Task</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/lexical-decision.html'>Lexical Decision Task</a>
-          <div class="demo-description">Word/non-word discrimination task</div>
-          <span class="demo-tag">Language Task</span>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Survey & Questionnaire Demos -->
-    <div id="survey-demos" class="category">
-      <h2>📋 Survey & Questionnaire Tools</h2>
-      <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-likert-demo1.html'>Likert Scale Survey</a>
-          <div class="demo-description">Rating scales with custom anchors</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-choice-demo1.html'>Multiple Choice Survey</a>
-          <div class="demo-description">Single-select questionnaire items</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-text-demo1.html'>Text Response Survey</a>
-          <div class="demo-description">Open-ended text responses</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-select-demo1.html'>Multi-Select Survey</a>
-          <div class="demo-description">Checkbox-based selections</div>
-        </div>
-        <!-- <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/basic_question_types.html'>Advanced Question Types</a>
-          <div class="demo-description">All survey plugin question formats</div>
-        </div> -->
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/response_validation.html'>Response Validation</a>
-          <div class="demo-description">Real-time input validation</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Response Method Demos -->
-    <div id="response-demos" class="category">
-      <h2>🖱️ Response Method Demos</h2>
-      <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-button-response-demo1.html'>Button Response</a>
-          <div class="demo-description">On-screen button responses</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-keyboard-response-demo1.html'>Keyboard Response</a>
-          <div class="demo-description">Keyboard key press responses</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-slider-response-demo1.html'>Slider Response</a>
-          <div class="demo-description">Continuous rating sliders</div>
-        </div>
-        <!-- <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-button-response-demo1.html'>Audio Button Response</a>
-          <div class="demo-description">Responses to audio stimuli</div>
-        </div> -->
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-image-button-response-demo1.html'>Image Button Response</a>
-          <div class="demo-description">Responses to image stimuli</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-video-button-response-demo1.html'>Video Button Response</a>
-          <div class="demo-description">Responses to video stimuli</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Specialized Research Tools -->
-    <div id="specialized-demos" class="category">
-      <h2>🔬 Specialized Research Tools</h2>
-      <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/eye-tracking-with-webgazer.html'>Eye Tracking (WebGazer)</a>
-          <div class="demo-description">Webcam-based eye tracking</div>
-          <span class="demo-tag">Advanced</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-mouse-tracking-demo1.html'>Mouse Tracking</a>
-          <div class="demo-description">Continuous mouse movement recording</div>
-          <span class="demo-tag">Advanced</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-virtual-chinrest-demo1.html'>Virtual Chinrest</a>
-          <div class="demo-description">Screen distance calibration</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-camera-demo1.html'>Camera Initialization</a>
-          <div class="demo-description">Webcam setup for video recording</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-microphone-demo1.html'>Microphone Initialization</a>
-          <div class="demo-description">Audio input setup</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-record-video-demo1.html'>Video Recording</a>
-          <div class="demo-description">Participant video recording</div>
-          <span class="demo-tag">Advanced</span>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Cognitive Task Demos -->
-    <div class="category">
-      <h2>🧠 Cognitive Task Demos</h2>
-      <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-image-demo1.html'>IAT (Image-based)</a>
-          <div class="demo-description">Implicit Association Test with images</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-html-demo1.html'>IAT (Text-based)</a>
-          <div class="demo-description">Implicit Association Test with text</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-serial-reaction-time-demo1.html'>Serial Reaction Time</a>
-          <div class="demo-description">Sequence learning task</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-visual-search-circle-demo1.html'>Visual Search</a>
-          <div class="demo-description">Visual attention search task</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-free-sort-demo1.html'>Free Sort Task</a>
-          <div class="demo-description">Categorization through drag & drop</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-sketchpad-demo1.html'>Sketchpad Drawing</a>
-          <div class="demo-description">Free-hand drawing responses</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Experimental Control -->
-    <div class="category">
-      <h2>⚙️ Experimental Control Features</h2>
-      <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-instructions-demo-1.html'>Instruction Screens</a>
-          <div class="demo-description">Multi-page instructions with progress</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-fullscreen-demo1.html'>Fullscreen Mode</a>
-          <div class="demo-description">Fullscreen experiment presentation</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-preload-demo1.html'>Stimulus Preloading</a>
-          <div class="demo-description">Media loading before experiment</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-browser-check-demo1.html'>Browser Compatibility Check</a>
-          <div class="demo-description">Ensure participant browser compatibility</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/external_page.html'>External Pages</a>
-          <div class="demo-description">Integrate external content/consent forms</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/external_html/simple_consent.html'>Consent Form Example</a>
-          <div class="demo-description">Standard research consent form</div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Footer -->
-    <div class="footer">
-      <p>jsPsych Research Demos Hub • Curated for researchers and experimental psychologists</p>
-      <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #666;">
-        Removed code-building examples • Prioritized research-ready demos • Dark theme optimized
-      </p>
-    </div>
-  </div>
-  
-  <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 20,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-    
-    // Add subtle hover effects
-    document.querySelectorAll('.demo-item').forEach(item => {
-      item.addEventListener('mouseenter', function() {
-        this.style.transition = 'all 0.3s ease';
-      });
-    });
-  </script>
+  <h1>Directory Sitemap</h1>
+  <pre>
+./
+	<a href='https://michaelwoodc.github.io/jsPsych/directory.html'>directory.html</a>
+	<a href='https://michaelwoodc.github.io/jsPsych/generate_directory.html'>generate_directory.html</a>
+	<a href='https://michaelwoodc.github.io/jsPsych/index.html'>index.html</a>
+	<a href='https://michaelwoodc.github.io/jsPsych/sitemap.html'>sitemap.html</a>
+		demos/
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/external_page.html'>external_page.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/eye-tracking-with-webgazer.html'>eye-tracking-with-webgazer.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-animation-demo.html'>jspsych-animation-demo.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-button-response-demo-1.html'>jspsych-audio-button-response-demo-1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-button-response-demo-2.html'>jspsych-audio-button-response-demo-2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-button-response-demo-3.html'>jspsych-audio-button-response-demo-3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-keyboard-response-demo-1.html'>jspsych-audio-keyboard-response-demo-1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-keyboard-response-demo-2.html'>jspsych-audio-keyboard-response-demo-2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-slider-response-demo-1.html'>jspsych-audio-slider-response-demo-1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-slider-response-demo-2.html'>jspsych-audio-slider-response-demo-2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-browser-check-demo1.html'>jspsych-browser-check-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-browser-check-demo2.html'>jspsych-browser-check-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-browser-check-demo3.html'>jspsych-browser-check-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-browser-check-demo4.html'>jspsych-browser-check-demo4.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-call-function-demo1.html'>jspsych-call-function-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-call-function-demo2.html'>jspsych-call-function-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-call-function-demo3.html'>jspsych-call-function-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-canvas-button-response-demo1.html'>jspsych-canvas-button-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-canvas-button-response-demo2.html'>jspsych-canvas-button-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-canvas-button-response-demo3.html'>jspsych-canvas-button-response-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-canvas-keyboard-response-demo1.html'>jspsych-canvas-keyboard-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-canvas-keyboard-response-demo2.html'>jspsych-canvas-keyboard-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-canvas-slider-response-demo1.html'>jspsych-canvas-slider-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-canvas-slider-response-demo2.html'>jspsych-canvas-slider-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-categorize-animation-demo1.html'>jspsych-categorize-animation-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-categorize-animation-demo2.html'>jspsych-categorize-animation-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-categorize-html-demo1.html'>jspsych-categorize-html-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-categorize-image-demo1.html'>jspsych-categorize-image-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-cloze-demo1.html'>jspsych-cloze-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-cloze-demo2.html'>jspsych-cloze-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-cloze-demo3.html'>jspsych-cloze-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-mouse-tracking-demo1.html'>jspsych-extension-mouse-tracking-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-record-video-demo1.html'>jspsych-extension-record-video-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-external-html-demo1.html'>jspsych-external-html-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-free-sort-demo1.html'>jspsych-free-sort-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-fullscreen-demo1.html'>jspsych-fullscreen-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-audio-response-demo1.html'>jspsych-html-audio-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-audio-response-demo2.html'>jspsych-html-audio-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-audio-response-demo3.html'>jspsych-html-audio-response-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-button-response-demo1.html'>jspsych-html-button-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-button-response-demo2.html'>jspsych-html-button-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-keyboard-response-demo1.html'>jspsych-html-keyboard-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-keyboard-response-demo2.html'>jspsych-html-keyboard-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-slider-response-demo1.html'>jspsych-html-slider-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-video-response-demo1.html'>jspsych-html-video-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-video-response-demo2.html'>jspsych-html-video-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-video-response-demo3.html'>jspsych-html-video-response-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-html-demo1.html'>jspsych-iat-html-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-image-demo1.html'>jspsych-iat-image-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-image-button-response-demo1.html'>jspsych-image-button-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-image-keyboard-response-demo1.html'>jspsych-image-keyboard-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-image-keyboard-response-demo2.html'>jspsych-image-keyboard-response-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-image-slider-response-demo1.html'>jspsych-image-slider-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-camera-demo1.html'>jspsych-initialize-camera-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-microphone-demo1.html'>jspsych-initialize-microphone-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-instructions-demo-1.html'>jspsych-instructions-demo-1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-instructions-demo-2.html'>jspsych-instructions-demo-2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-instructions-demo-3.html'>jspsych-instructions-demo-3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-maxdiff-demo1.html'>jspsych-maxdiff-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-mirror-camera-demo1.html'>jspsych-mirror-camera-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-preload-demo1.html'>jspsych-preload-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-preload-demo2.html'>jspsych-preload-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-preload-demo3.html'>jspsych-preload-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-preload-demo4.html'>jspsych-preload-demo4.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-reconstruction-demo1.html'>jspsych-reconstruction-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-resize-demo1.html'>jspsych-resize-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-same-different-html-demo1.html'>jspsych-same-different-html-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-same-different-image-demo1.html'>jspsych-same-different-image-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-serial-reaction-time-demo1.html'>jspsych-serial-reaction-time-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-serial-reaction-time-demo2.html'>jspsych-serial-reaction-time-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-serial-reaction-time-mouse-demo1.html'>jspsych-serial-reaction-time-mouse-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-serial-reaction-time-mouse-demo2.html'>jspsych-serial-reaction-time-mouse-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-sketchpad-demo1.html'>jspsych-sketchpad-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-sketchpad-demo2.html'>jspsych-sketchpad-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-sketchpad-demo3.html'>jspsych-sketchpad-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-demo1.html'>jspsych-survey-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-demo2.html'>jspsych-survey-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-demo3.html'>jspsych-survey-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-demo4.html'>jspsych-survey-demo4.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-demo5.html'>jspsych-survey-demo5.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-demo6.html'>jspsych-survey-demo6.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-demo7.html'>jspsych-survey-demo7.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-html-form-demo1.html'>jspsych-survey-html-form-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-html-form-demo2.html'>jspsych-survey-html-form-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-likert-demo1.html'>jspsych-survey-likert-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-likert-demo2.html'>jspsych-survey-likert-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-choice-demo1.html'>jspsych-survey-multi-choice-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-choice-demo2.html'>jspsych-survey-multi-choice-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-select-demo1.html'>jspsych-survey-multi-select-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-text-demo1.html'>jspsych-survey-text-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-text-demo2.html'>jspsych-survey-text-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-text-demo3.html'>jspsych-survey-text-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-text-demo4.html'>jspsych-survey-text-demo4.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-video-button-response-demo1.html'>jspsych-video-button-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-video-keyboard-response-demo1.html'>jspsych-video-keyboard-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-video-slider-response-demo1.html'>jspsych-video-slider-response-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-virtual-chinrest-demo1.html'>jspsych-virtual-chinrest-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-virtual-chinrest-demo2.html'>jspsych-virtual-chinrest-demo2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-virtual-chinrest-demo3.html'>jspsych-virtual-chinrest-demo3.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-visual-search-circle-demo1.html'>jspsych-visual-search-circle-demo1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-visual-search-circle-demo2.html'>jspsych-visual-search-circle-demo2.html</a>
+	examples/
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/abort-current-timeline.html'>abort-current-timeline.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/abort-experiment.html'>abort-experiment.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/add-to-end-of-timeline.html'>add-to-end-of-timeline.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/case-sensitive-responses.html'>case-sensitive-responses.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/conditional-and-loop-functions.html'>conditional-and-loop-functions.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/css-classes-parameter.html'>css-classes-parameter.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/data-add-properties.html'>data-add-properties.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/data-as-function.html'>data-as-function.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/data-from-timeline.html'>data-from-timeline.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/data-from-url.html'>data-from-url.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/demo-flanker.html'>demo-flanker.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/demo-simple-rt-task.html'>demo-simple-rt-task.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/display-element-to-embed-experiment.html'>display-element-to-embed-experiment.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/extension-record-video.html'>extension-record-video.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-animation.html'>jspsych-animation.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-audio-button-response.html'>jspsych-audio-button-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-audio-keyboard-response.html'>jspsych-audio-keyboard-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-audio-slider-response.html'>jspsych-audio-slider-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-browser-check.html'>jspsych-browser-check.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-call-function.html'>jspsych-call-function.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-canvas-button-response.html'>jspsych-canvas-button-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-canvas-keyboard-response.html'>jspsych-canvas-keyboard-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-canvas-slider-response.html'>jspsych-canvas-slider-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-categorize-animation.html'>jspsych-categorize-animation.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-categorize-html.html'>jspsych-categorize-html.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-categorize-image.html'>jspsych-categorize-image.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-cloze.html'>jspsych-cloze.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-extension-mouse-tracking.html'>jspsych-extension-mouse-tracking.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-external-html.html'>jspsych-external-html.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-free-sort.html'>jspsych-free-sort.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-fullscreen.html'>jspsych-fullscreen.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-html-button-response.html'>jspsych-html-button-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-html-keyboard-response.html'>jspsych-html-keyboard-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-html-slider-response.html'>jspsych-html-slider-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-html-video-response.html'>jspsych-html-video-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-iat.html'>jspsych-iat.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-image-button-response.html'>jspsych-image-button-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-image-keyboard-response.html'>jspsych-image-keyboard-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-image-slider-response.html'>jspsych-image-slider-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-initialize-camera.html'>jspsych-initialize-camera.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-initialize-microphone.html'>jspsych-initialize-microphone.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-instructions.html'>jspsych-instructions.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-maxdiff.html'>jspsych-maxdiff.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-mirror-camera.html'>jspsych-mirror-camera.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-preload.html'>jspsych-preload.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-reconstruction.html'>jspsych-reconstruction.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-resize.html'>jspsych-resize.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-same-different-html.html'>jspsych-same-different-html.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-same-different-image.html'>jspsych-same-different-image.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-serial-reaction-time-mouse.html'>jspsych-serial-reaction-time-mouse.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-serial-reaction-time.html'>jspsych-serial-reaction-time.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-sketchpad.html'>jspsych-sketchpad.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-survey-html-form.html'>jspsych-survey-html-form.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-survey-likert.html'>jspsych-survey-likert.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-survey-multi-choice.html'>jspsych-survey-multi-choice.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-survey-multi-select.html'>jspsych-survey-multi-select.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-survey-text.html'>jspsych-survey-text.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-video-button-response.html'>jspsych-video-button-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-video-keyboard-response.html'>jspsych-video-keyboard-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-video-slider-response.html'>jspsych-video-slider-response.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-virtual-chinrest.html'>jspsych-virtual-chinrest.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-visual-search-circle.html'>jspsych-visual-search-circle.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-vsl-animate-occlusion.html'>jspsych-vsl-animate-occlusion.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/jspsych-vsl-grid-scene.html'>jspsych-vsl-grid-scene.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/lexical-decision.html'>lexical-decision.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/manual-preloading.html'>manual-preloading.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/pause-unpause.html'>pause-unpause.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/progress-bar.html'>progress-bar.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/save-trial-parameters.html'>save-trial-parameters.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/simulation-data-only-mode.html'>simulation-data-only-mode.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/simulation-visual-mode.html'>simulation-visual-mode.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/timeline-variables-sampling.html'>timeline-variables-sampling.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/timeline-variables.html'>timeline-variables.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/webgazer.html'>webgazer.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/webgazer_audio.html'>webgazer_audio.html</a>
+		<a href='https://michaelwoodc.github.io/jsPsych/examples/webgazer_image.html'>webgazer_image.html</a>
+			www/
+				<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/calibration.html'>calibration.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/collision.html'>collision.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/heatmap.html'>heatmap.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/index.html'>index.html</a>
+				data/
+					<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/data/index.html'>index.html</a>
+					src/
+						<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/data/src/webgazerExtractClient.html'>webgazerExtractClient.html</a>
+					dist/
+						<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/jquery/dist/jquery.min.html'>jquery.min.html</a>
+				js/
+					<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/js/bootstrap.min.html'>bootstrap.min.html</a>
+				search/
+					<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/search/index.html'>index.html</a>
+						bing/
+							<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/search/examples/bing/login.html'>login.html</a>
+				trainingData/
+					<a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/trainingData/collect.html'>collect.html</a>
+		demos/
+			<a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_1.html'>demo_1.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_2.html'>demo_2.html</a>
+			<a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_3.html'>demo_3.html</a>
+		external_html/
+			<a href='https://michaelwoodc.github.io/jsPsych/examples/external_html/simple_consent.html'>simple_consent.html</a>
+				timing-tests/
+					<a href='https://michaelwoodc.github.io/jsPsych/packages/jspsych/tests/timing-tests/audio-input.html'>audio-input.html</a>
+					<a href='https://michaelwoodc.github.io/jsPsych/packages/jspsych/tests/timing-tests/square-flicker.html'>square-flicker.html</a>
+			examples/
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/basic_question_types.html'>basic_question_types.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/combine_json_function.html'>combine_json_function.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/conditional_question_display.html'>conditional_question_display.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/dynamically_generating_content.html'>dynamically_generating_content.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/minimal-parameters.html'>minimal-parameters.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/reference_previous_answers.html'>reference_previous_answers.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/response_validation.html'>response_validation.html</a>
+				<a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/slider_scale.html'>slider_scale.html</a>
+  </pre>
 </body>
 </html>
