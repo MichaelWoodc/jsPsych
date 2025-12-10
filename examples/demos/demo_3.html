@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="../../packages/jspsych/dist/index.browser.js"></script>
-    <script src="../../packages/plugin-html-keyboard-response/dist/index.browser.js"></script>
-    <link rel="stylesheet" href="../../packages/jspsych/css/jspsych.css" />
+    <script src="https://unpkg.com/jspsych/dist/index.browser.js"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jspsych/css/jspsych.css" />
     <style>
       .flanker-stimulus {
         font-size: 500%;
@@ -17,10 +17,20 @@
   <script>
 
     var jsPsych = initJsPsych({
+      override_safe_mode:true,
       on_finish: function() {
         jsPsych.data.displayData();
       }
     });
+    
+    // Instructions added at the beginning
+    var welcome = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<p>Flanker Task Instructions:</p>' +
+                '<p>Press LEFT ARROW if center arrow points LEFT</p>' +
+                '<p>Press RIGHT ARROW if center arrow points RIGHT</p>' +
+                '<p>Ignore flanking arrows. Press any key to begin.</p>'
+    };
     
     var test_stimuli = [
       { stimulus: "<<<<<", data: { stim_type: 'congruent'} },
@@ -56,6 +66,7 @@
     };
 
     var timeline = [];
+    timeline.push(welcome);  // Added instructions first
     timeline.push(test);
     timeline.push(debrief);
 
