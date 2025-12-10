@@ -4,20 +4,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="../../jspsych/dist/index.browser.js"></script>
-  <script src="../dist/index.browser.js"></script>
-  <link rel="stylesheet" href="../../jspsych/css/jspsych.css" />
-  <link rel="stylesheet" href="../css/survey.min.css" />
+
+  <!-- jsPsych core -->
+  <script src="https://unpkg.com/jspsych/dist/index.browser.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/jspsych/css/jspsych.css" />
+
+  <!-- Plugins -->
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey"></script>
+
+  <script src="https://unpkg.com/@jspsych/plugin-preload"></script>
 </head>
 
 <body></body>
 <script type="text/javascript">
 
-  const jsPsych = initJsPsych({
+  var jsPsych = initJsPsych({
+    override_safe_mode: true,
     on_finish: function() {
       jsPsych.data.displayData();
     }
   });
+
 
   // This example shows how to combine several basic question types: 
   // text (with autocomplete options), dropdown, multi-select dropdown ("tagbox").
