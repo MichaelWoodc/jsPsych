@@ -107,6 +107,10 @@
       padding: 1rem;
       transition: all 0.2s ease;
       border-left: 3px solid transparent;
+      display: block; /* Changed from default inline */
+      text-decoration: none; /* Remove underline */
+      color: inherit; /* Inherit text color */
+      cursor: pointer;
     }
     
     .demo-item:hover {
@@ -115,7 +119,7 @@
       transform: translateX(5px);
     }
     
-    .demo-item a {
+    .demo-item .demo-title {
       color: var(--text-primary);
       text-decoration: none;
       display: block;
@@ -123,7 +127,7 @@
       margin-bottom: 0.25rem;
     }
     
-    .demo-item a:hover {
+    .demo-item:hover .demo-title {
       color: var(--accent-hover);
     }
     
@@ -222,66 +226,68 @@
     
     <!-- Key Demos (Research-Ready) -->
     <div id="key-demos" class="category key-demos">
-      <h2>Key Research-Ready Demos</h2>
+      <h2>Key Research Demos / Tools </h2>
       <div class="demo-grid">
 
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/calibration.html'>Eye tracking Calibration Demo</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/calibration.html' class="demo-item">
+          <span class="demo-title">Eye tracking Calibration Demo</span>
           <div class="demo-description">Eye Tracking Demo - Calibration phase</div>
           <span class="demo-tag">Complete Demo</span>
-        </div>
+        </a>
 
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/collision.html'>Eye Tracking Collision Interactive Demo</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/WebGazer-master/www/collision.html' class="demo-item">
+          <span class="demo-title">Eye Tracking Collision Interactive Demo</span>
           <div class="demo-description">Eye Tracking Demo - Collision Example, use after calibration, may require you to click in window to activate it.</div>
           <span class="demo-tag">Complete Demo</span>
-        </div>
+        </a>
 
-
-        <div class="demo-item">
-          <a href='https://michaelwoodcock.duckdns.org/archive/behavior_contrast/main.html'>Eye Tracking Experiment Demo</a>
+        <a href='https://michaelwoodcock.duckdns.org/archive/behavior_contrast/main.html' class="demo-item">
+          <span class="demo-title">Eye Tracking Experiment Demo</span>
           <div class="demo-description"> Missing only the initial calibration, this 90% complete example utilizing eye tracking and data saving functionality demonstrates the utility of webcam eye tracking. This saves all data throughout the experiment to a server upon completion, and allows you to download sample data.  </div>
           <span class="demo-tag">Complete Demo</span>
-        </div>
+        </a>
 
-
-        <div class="demo-item">
-          <a href='https://michaelwoodcock.duckdns.org/archive/behavior_contrast/main.html'>Qualtrics Experiment Example</a>
+        <a href='https://michaelwoodcock.duckdns.org/archive/behavior_contrast/main.html' class="demo-item">
+          <span class="demo-title">Qualtrics Experiment Example</span>
           <div class="demo-description">A complete JS Psych example that runs right in qualtrics!  This example would allow us to integrate any experiment with qualtrics for a seamless experience for participants!</div>
           <span class="demo-tag">Complete Demo</span>
-        </div>        
+        </a>        
 
-
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_1.html'>Complete Experiment Demo 1</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_1.html' class="demo-item">
+          <span class="demo-title">Complete Experiment Demo 1</span>
           <div class="demo-description">Full-featured experiment with multiple trial types</div>
           <span class="demo-tag">Complete Demo</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_2.html'>Complete Experiment Demo 2</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_2.html' class="demo-item">
+          <span class="demo-title">Complete Experiment Demo 2</span>
           <div class="demo-description">Alternative experiment structure and flow</div>
           <span class="demo-tag">Complete Demo</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_3.html'>Complete Experiment Demo 3</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/demos/demo_3.html' class="demo-item">
+          <span class="demo-title">Complete Experiment Demo 3</span>
           <div class="demo-description">Advanced experimental design patterns</div>
           <span class="demo-tag">Complete Demo</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demo-flanker.html'>Flanker Task Demo</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/demo-flanker.html' class="demo-item">
+          <span class="demo-title">Flanker Task Demo</span>
           <div class="demo-description">Classic attentional conflict task</div>
           <span class="demo-tag">Cognitive Task</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/demo-simple-rt-task.html'>Simple RT Task</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/demo-simple-rt-task.html' class="demo-item">
+          <span class="demo-title">Simple RT Task</span>
           <div class="demo-description">Basic reaction time measurement</div>
           <span class="demo-tag">Basic Task</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/lexical-decision.html'>Lexical Decision Task</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/lexical-decision.html' class="demo-item">
+          <span class="demo-title">Lexical Decision Task</span>
           <div class="demo-description">Word/non-word discrimination task</div>
           <span class="demo-tag">Language Task</span>
-        </div>
+        </a>
       </div>
     </div>
     
@@ -289,30 +295,30 @@
     <div id="survey-demos" class="category">
       <h2>📋 Survey & Questionnaire Tools</h2>
       <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-likert-demo1.html'>Likert Scale Survey</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-likert-demo1.html' class="demo-item">
+          <span class="demo-title">Likert Scale Survey</span>
           <div class="demo-description">Rating scales with custom anchors</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-choice-demo1.html'>Multiple Choice Survey</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-choice-demo1.html' class="demo-item">
+          <span class="demo-title">Multiple Choice Survey</span>
           <div class="demo-description">Single-select questionnaire items</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-text-demo1.html'>Text Response Survey</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-text-demo1.html' class="demo-item">
+          <span class="demo-title">Text Response Survey</span>
           <div class="demo-description">Open-ended text responses</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-select-demo1.html'>Multi-Select Survey</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-survey-multi-select-demo1.html' class="demo-item">
+          <span class="demo-title">Multi-Select Survey</span>
           <div class="demo-description">Checkbox-based selections</div>
-        </div>
-        <!-- <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/basic_question_types.html'>Advanced Question Types</a>
-          <div class="demo-description">All survey plugin question formats</div>
-        </div> -->
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/response_validation.html'>Response Validation</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/packages/plugin-survey/examples/response_validation.html' class="demo-item">
+          <span class="demo-title">Response Validation</span>
           <div class="demo-description">Real-time input validation</div>
-        </div>
+        </a>
       </div>
     </div>
     
@@ -320,30 +326,30 @@
     <div id="response-demos" class="category">
       <h2>Response Method Demos</h2>
       <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-button-response-demo1.html'>Button Response</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-button-response-demo1.html' class="demo-item">
+          <span class="demo-title">Button Response</span>
           <div class="demo-description">On-screen button responses</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-keyboard-response-demo1.html'>Keyboard Response</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-keyboard-response-demo1.html' class="demo-item">
+          <span class="demo-title">Keyboard Response</span>
           <div class="demo-description">Keyboard key press responses</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-slider-response-demo1.html'>Slider Response</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-html-slider-response-demo1.html' class="demo-item">
+          <span class="demo-title">Slider Response</span>
           <div class="demo-description">Continuous rating sliders</div>
-        </div>
-        <!-- <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-audio-button-response-demo1.html'>Audio Button Response</a>
-          <div class="demo-description">Responses to audio stimuli</div>
-        </div> -->
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-image-button-response-demo1.html'>Image Button Response</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-image-button-response-demo1.html' class="demo-item">
+          <span class="demo-title">Image Button Response</span>
           <div class="demo-description">Responses to image stimuli</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-video-button-response-demo1.html'>Video Button Response</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-video-button-response-demo1.html' class="demo-item">
+          <span class="demo-title">Video Button Response</span>
           <div class="demo-description">Responses to video stimuli</div>
-        </div>
+        </a>
       </div>
     </div>
     
@@ -351,33 +357,38 @@
     <div id="specialized-demos" class="category">
       <h2>Specialized Research Tools</h2>
       <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/eye-tracking-with-webgazer.html'>Eye Tracking (WebGazer)</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/eye-tracking-with-webgazer.html' class="demo-item">
+          <span class="demo-title">Eye Tracking (WebGazer)</span>
           <div class="demo-description">Webcam-based eye tracking</div>
           <span class="demo-tag">Advanced</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-mouse-tracking-demo1.html'>Mouse Tracking</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-mouse-tracking-demo1.html' class="demo-item">
+          <span class="demo-title">Mouse Tracking</span>
           <div class="demo-description">Continuous mouse movement recording</div>
           <span class="demo-tag">Advanced</span>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-virtual-chinrest-demo1.html'>Virtual Chinrest</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-virtual-chinrest-demo1.html' class="demo-item">
+          <span class="demo-title">Virtual Chinrest</span>
           <div class="demo-description">Screen distance calibration</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-camera-demo1.html'>Camera Initialization</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-camera-demo1.html' class="demo-item">
+          <span class="demo-title">Camera Initialization</span>
           <div class="demo-description">Webcam setup for video recording</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-microphone-demo1.html'>Microphone Initialization</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-initialize-microphone-demo1.html' class="demo-item">
+          <span class="demo-title">Microphone Initialization</span>
           <div class="demo-description">Audio input setup</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-record-video-demo1.html'>Video Recording</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-extension-record-video-demo1.html' class="demo-item">
+          <span class="demo-title">Video Recording</span>
           <div class="demo-description">Participant video recording</div>
           <span class="demo-tag">Advanced</span>
-        </div>
+        </a>
       </div>
     </div>
     
@@ -385,30 +396,35 @@
     <div class="category">
       <h2>Cognitive Task Demos</h2>
       <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-image-demo1.html'>IAT (Image-based)</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-image-demo1.html' class="demo-item">
+          <span class="demo-title">IAT (Image-based)</span>
           <div class="demo-description">Implicit Association Test with images</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-html-demo1.html'>IAT (Text-based)</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-iat-html-demo1.html' class="demo-item">
+          <span class="demo-title">IAT (Text-based)</span>
           <div class="demo-description">Implicit Association Test with text</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-serial-reaction-time-demo1.html'>Serial Reaction Time</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-serial-reaction-time-demo1.html' class="demo-item">
+          <span class="demo-title">Serial Reaction Time</span>
           <div class="demo-description">Sequence learning task</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-visual-search-circle-demo1.html'>Visual Search</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-visual-search-circle-demo1.html' class="demo-item">
+          <span class="demo-title">Visual Search</span>
           <div class="demo-description">Visual attention search task</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-free-sort-demo1.html'>Free Sort Task</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-free-sort-demo1.html' class="demo-item">
+          <span class="demo-title">Free Sort Task</span>
           <div class="demo-description">Categorization through drag & drop</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-sketchpad-demo1.html'>Sketchpad Drawing</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-sketchpad-demo1.html' class="demo-item">
+          <span class="demo-title">Sketchpad Drawing</span>
           <div class="demo-description">Free-hand drawing responses</div>
-        </div>
+        </a>
       </div>
     </div>
     
@@ -416,30 +432,35 @@
     <div class="category">
       <h2>Experimental Control Features</h2>
       <div class="demo-grid">
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-instructions-demo-1.html'>Instruction Screens</a>
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-instructions-demo-1.html' class="demo-item">
+          <span class="demo-title">Instruction Screens</span>
           <div class="demo-description">Multi-page instructions with progress</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-fullscreen-demo1.html'>Fullscreen Mode</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-fullscreen-demo1.html' class="demo-item">
+          <span class="demo-title">Fullscreen Mode</span>
           <div class="demo-description">Fullscreen experiment presentation</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-preload-demo1.html'>Stimulus Preloading</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-preload-demo1.html' class="demo-item">
+          <span class="demo-title">Stimulus Preloading</span>
           <div class="demo-description">Media loading before experiment</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-browser-check-demo1.html'>Browser Compatibility Check</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/jspsych-browser-check-demo1.html' class="demo-item">
+          <span class="demo-title">Browser Compatibility Check</span>
           <div class="demo-description">Ensure participant browser compatibility</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/external_page.html'>External Pages</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/docs/demos/external_page.html' class="demo-item">
+          <span class="demo-title">External Pages</span>
           <div class="demo-description">Integrate external content/consent forms</div>
-        </div>
-        <div class="demo-item">
-          <a href='https://michaelwoodc.github.io/jsPsych/examples/external_html/simple_consent.html'>Consent Form Example</a>
+        </a>
+        
+        <a href='https://michaelwoodc.github.io/jsPsych/examples/external_html/simple_consent.html' class="demo-item">
+          <span class="demo-title">Consent Form Example</span>
           <div class="demo-description">Standard research consent form</div>
-        </div>
+        </a>
       </div>
     </div>
     
@@ -453,21 +474,23 @@
   </div>
   
   <script>
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links (excluding demo-item links)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if(targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 20,
-            behavior: 'smooth'
-          });
-        }
-      });
+      if(!anchor.classList.contains('demo-item')) {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if(targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if(targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 20,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
     });
     
     // Add subtle hover effects
